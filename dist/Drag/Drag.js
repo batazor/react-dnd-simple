@@ -1,17 +1,34 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _dec, _class, _class2, _temp;
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _reactDnd = require('react-dnd');
+
+var _classnames = require('classnames');
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
-import { DragSource } from 'react-dnd';
-import classnames from 'classnames';
 
 var boxSource = {
   beginDrag: function beginDrag(props) {
@@ -35,7 +52,7 @@ var boxSource = {
   }
 };
 
-var Drag = (_dec = DragSource(function (props) {
+var Drag = (_dec = (0, _reactDnd.DragSource)(function (props) {
   return props.type;
 }, boxSource, function (connect, monitor) {
   return {
@@ -63,10 +80,10 @@ var Drag = (_dec = DragSource(function (props) {
 
       var isDragClassName = isDragging && this.props.isDragClassName;
 
-      return connectDragSource && connectDragSource(React.createElement(
+      return connectDragSource && connectDragSource(_react2.default.createElement(
         'div',
         {
-          className: classnames(this.props.className, isDragClassName),
+          className: (0, _classnames2.default)(this.props.className, isDragClassName),
           style: this.props.style,
           onClick: function onClick() {
             return _onClick(data.indexRow);
@@ -81,17 +98,17 @@ var Drag = (_dec = DragSource(function (props) {
   }]);
 
   return Drag;
-}(PureComponent), _class2.propTypes = {
-  isDragging: PropTypes.bool.isRequired,
-  connectDragSource: PropTypes.func.isRequired,
-  isDragClassName: PropTypes.string,
+}(_react.PureComponent), _class2.propTypes = {
+  isDragging: _propTypes2.default.bool.isRequired,
+  connectDragSource: _propTypes2.default.func.isRequired,
+  isDragClassName: _propTypes2.default.string,
 
-  data: PropTypes.object.isRequired,
-  children: PropTypes.node.isRequired,
-  className: PropTypes.string,
-  style: PropTypes.object,
+  data: _propTypes2.default.object.isRequired,
+  children: _propTypes2.default.node.isRequired,
+  className: _propTypes2.default.string,
+  style: _propTypes2.default.object,
 
-  onClick: PropTypes.func
+  onClick: _propTypes2.default.func
 }, _class2.defaultProps = {
   className: undefined,
   style: undefined,
@@ -99,6 +116,4 @@ var Drag = (_dec = DragSource(function (props) {
 
   onClick: function onClick() {}
 }, _temp)) || _class);
-
-
-export default Drag;
+exports.default = Drag;
