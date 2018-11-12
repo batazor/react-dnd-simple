@@ -34,15 +34,15 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "classnames": "^2.2.6",
-    "eslint": "^5.8.0",
+    "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "prop-types": "^15.6.2",
-    "react": "^16.6.0",
-    "react-dnd": "^3.0.2",
-    "react-dnd-html5-backend": "^5.0.1"
+    "react": "^16.6.1",
+    "react-dnd": "^6.0.0",
+    "react-dnd-html5-backend": "^6.0.0"
   },
   "peerDependencies": {
     "react": "^16.0.0",
