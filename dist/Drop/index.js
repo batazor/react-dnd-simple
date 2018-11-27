@@ -30,7 +30,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var dustbinTarget = {
+var defaultTarget = {
   drop: function drop(props, monitor, component) {
     if (monitor.didDrop()) {
       return undefined;
@@ -46,7 +46,9 @@ var dustbinTarget = {
 
 var Drop = (_dec = (0, _reactDnd.DropTarget)(function (props) {
   return props.accepts;
-}, dustbinTarget, function (connect, monitor) {
+}, function (props) {
+  return props.customDropTarget || defaultTarget;
+}, function (connect, monitor) {
   return {
     connectDropTarget: connect.dropTarget(),
     isOver: monitor.isOver(),

@@ -1,6 +1,6 @@
 {
   "name": "react-dnd-simple",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Wrapper over react-dnd",
   "main": "dist/index.js",
   "scripts": {

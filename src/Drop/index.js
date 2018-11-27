@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { DropTarget } from 'react-dnd'
 import classnames from 'classnames'
 
-const dustbinTarget = {
+const defaultTarget = {
   drop(props, monitor, component) {
     if (monitor.didDrop()) {
       return undefined
@@ -17,11 +17,15 @@ const dustbinTarget = {
   },
 }
 
-@DropTarget(props => props.accepts, dustbinTarget, (connect, monitor) => ({
-  connectDropTarget: connect.dropTarget(),
-  isOver: monitor.isOver(),
-  canDrop: monitor.canDrop(),
-}))
+@DropTarget(
+  props => props.accepts,
+  props => (props.customDropTarget || defaultTarget),
+  (connect, monitor) => ({
+    connectDropTarget: connect.dropTarget(),
+    isOver: monitor.isOver(),
+    canDrop: monitor.canDrop(),
+  }),
+)
 class Drop extends PureComponent {
   render() {
     const { connectDropTarget } = this.props
