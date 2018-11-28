@@ -46,9 +46,7 @@ var defaultTarget = {
 
 var Drop = (_dec = (0, _reactDnd.DropTarget)(function (props) {
   return props.accepts;
-}, function (props) {
-  return props.customDropTarget || defaultTarget;
-}, function (connect, monitor) {
+}, defaultTarget, function (connect, monitor) {
   return {
     connectDropTarget: connect.dropTarget(),
     isOver: monitor.isOver(),

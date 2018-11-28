@@ -19,7 +19,7 @@ const defaultTarget = {
 
 @DropTarget(
   props => props.accepts,
-  props => (props.customDropTarget || defaultTarget),
+  defaultTarget,
   (connect, monitor) => ({
     connectDropTarget: connect.dropTarget(),
     isOver: monitor.isOver(),
