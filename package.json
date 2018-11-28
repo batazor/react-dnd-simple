@@ -1,6 +1,6 @@
 {
   "name": "react-dnd-simple",
-  "version": "1.0.7",
+  "version": "7.0.0",
   "description": "Wrapper over react-dnd",
   "main": "dist/index.js",
   "scripts": {
@@ -45,8 +45,8 @@
     "react-dnd-html5-backend": "^7.0.0"
   },
   "peerDependencies": {
-    "react": "^16.0.0",
-    "react-dnd": "^3.0.2",
-    "react-dnd-html5-backend": "^5.0.0"
+    "react": "^16.6.0",
+    "react-dnd": "^7.0.0",
+    "react-dnd-html5-backend": "^7.0.0"
   }
 }
