@@ -5,7 +5,7 @@ Wrapper over react-dnd
 ### Usage
 
 ```js
-import { Context, Drag, Drog } from 'react-dnd-simple'
+import { Context, Drag, Drop } from 'react-dnd-simple'
 
 // ...code
 <Context>
