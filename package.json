@@ -40,12 +40,12 @@
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0",
     "prop-types": "^15.6.2",
-    "react": "^16.6.3",
+    "react": "^16.8.6",
     "react-dnd": "^7.4.5",
     "react-dnd-html5-backend": "^7.4.4"
   },
   "peerDependencies": {
-    "react": "^16.6.0",
+    "react": "^16.8.6",
     "react-dnd": "^7.4.5",
     "react-dnd-html5-backend": "^7.4.4"
   }
