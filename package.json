@@ -28,7 +28,7 @@
   "homepage": "https://github.com/batazor/react-dnd-simple#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "@babel/eslint-parser": "^7.21.8",
+    "@babel/eslint-parser": "^7.22.5",
     "babel-plugin-transform-decorators-legacy": "^1.3.5",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
